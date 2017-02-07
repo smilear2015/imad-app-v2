@@ -8,9 +8,9 @@ app.use(morgan('combined'));
 
 var config = {
   host: 'PostgreSQL 9.6',
-  user: 'smilewithanu2016',
+  user: 'smilear2015',
   password: 'sa',
-  database: 'smilewithanu2016',
+  database: 'smilear2015',
   port: '5432'
 };
 
