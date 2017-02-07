@@ -6,15 +6,6 @@ var Pool = require('pg').Pool;
 var app = express();
 app.use(morgan('combined'));
 
-var config = {
-  host: 'PostgreSQL 9.6',
-  user: 'smilear2015',
-  password: 'sa',
-  database: 'smilear2015',
-  port: '5432'
-};
-
-var pool = new Pool(config);
 
 
 app.get('/', function (req, res) {
@@ -32,9 +23,7 @@ app.get('/ui/pic.jpg', function (req, res) {
 app.get('/ui/Logo.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Logo.jpg'));
 });
-app.get('/ui/bloglogo.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'bloglogo.jpg'));
-});
+
 app.get('/ui/bg.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'bg.jpg'));
 });
@@ -42,9 +31,7 @@ app.get('/ui/bg.jpg', function (req, res) {
 app.get('/ui/Home.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Home.html'));
 });
-app.get('/ui/bloghome.html', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'bloghome.html'));
-});
+
 
 app.get('/ui/hd1.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'hd1.jpg'));
@@ -144,7 +131,6 @@ app.get('/ui/Books.html', function (req, res) {
 app.get('/ui/Misc.html', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'Misc.html'));
 });
-
 
 
 
